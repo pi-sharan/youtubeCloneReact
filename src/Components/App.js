@@ -15,16 +15,12 @@ class App extends React.Component {
             }
         });
         this.setState({ videos: response.data.items });
-        console.dir(this.state.videos);
     };
 
     render() {
         return (
             <div>
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                {/* <h1>
-                    {console.log(this.state.videos.length)}
-                </h1> */}
             </div>
 
         );
