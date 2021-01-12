@@ -1,0 +1,17 @@
+.searchBar{
+    display: flex;
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.searchBox{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.myForm{
+    display: flex;
+    flex-basis: 80%;
+    justify-content: center;
+}
