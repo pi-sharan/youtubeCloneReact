@@ -1,13 +1,18 @@
 import React from 'react';
+import '../CSS/Video.css';
 
-class Video extends React.Component {
-    render() {
-        return (
-            <video width="800" controls autoPlay>
-                <source src="/video.mp4" type="video/mp4" />
-            </video>
-        );
+const Video = props => {
+    const baseURL = "https://www.youtube.com/embed/";
+    let currURL = "";
+    if (props.Vids.length >= 1) {
+        currURL = baseURL + props.Vids[0].id.videoId;
     }
+    return (
+        <iframe controls
+            src={currURL}>
+        </iframe>
+    );
+
 }
 
 export default Video;

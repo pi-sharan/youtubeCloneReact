@@ -2,6 +2,8 @@ import React from 'react';
 import SearchBar from './SearchBar.js';
 import youtube from '../apis/youtube';
 import Video from './Video.js';
+import '../CSS/App.css';
+import Desc from './Desc.js';
 
 class App extends React.Component {
     state = { videos: [] };
@@ -10,19 +12,19 @@ class App extends React.Component {
         const response = await youtube.get('', {
             params: {
                 q: searchTerm,
-                part: 'snippet',
-                key: 'AIzaSyDAiqQHJJc_wKi7qLIya2hb9fO8ImCC3pQ',
-                maxResults: 30
             }
         });
         this.setState({ videos: response.data.items });
+        console.log(this.state.videos);
     };
+
 
     render() {
         return (
-            <div>
+            <div className="wrapAll">
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                <Video />
+                <Video Vids={this.state.videos} />
+                <Desc Vids={this.state.videos} />
             </div>
 
         );
