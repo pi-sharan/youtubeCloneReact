@@ -5,6 +5,7 @@
 
 .container:hover{
     background-color: rgb(82, 78, 78);
+    cursor:pointer;
 }
 
 .title{
