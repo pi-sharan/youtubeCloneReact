@@ -4,6 +4,7 @@ import youtube from '../apis/youtube';
 import Video from './Video.js';
 import '../CSS/App.css';
 import Desc from './Desc.js';
+import VidList from './VidList.js'
 
 class App extends React.Component {
     state = { videos: [] };
@@ -25,6 +26,7 @@ class App extends React.Component {
                 <SearchBar onSubmit={this.onSearchSubmit} />
                 <Video Vids={this.state.videos} />
                 <Desc Vids={this.state.videos} />
+                <VidList Vids={this.state.videos} />
             </div>
 
         );
