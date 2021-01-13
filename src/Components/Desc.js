@@ -4,8 +4,8 @@ import '../CSS/Desc.css';
 const Desc = props => {
     let text = "";
 
-    if (props.Vids.length >= 1) {
-        text = props.Vids[0].snippet.description;
+    if (props.Vid != undefined) {
+        text = props.Vid.snippet.description;
     }
 
     return (

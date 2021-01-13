@@ -7,7 +7,7 @@ import Desc from './Desc.js';
 import VidList from './VidList.js'
 
 class App extends React.Component {
-    state = { videos: [], currentVid: [] };
+    state = { videos: [], currentVid: undefined };
 
     onSearchSubmit = async searchTerm => {
         const response = await youtube.get('', {
@@ -16,22 +16,23 @@ class App extends React.Component {
             }
         });
         this.setState({ videos: response.data.items });
-        console.log(this.state.videos);
     };
 
-    // onCardSelect = (vid) => {
-    //     this.setState({currentVid:vid});
-    // }
+    onCardSelect = (vid) => {
+        this.setState({ currentVid: vid });
+        // console.log(vid);
+    }
 
 
     render() {
+
         return (
             <div className="wrapAll">
                 <SearchBar onSubmit={this.onSearchSubmit} />
                 <div class="insideItems">
-                    <Video Vids={this.state.videos} />
-                    <Desc Vids={this.state.videos} />
-                    <VidList Vids={this.state.videos} />
+                    <Video Vid={this.state.currentVid} />
+                    <Desc Vid={this.state.currentVid} />
+                    <VidList Vids={this.state.videos} onCardClick={this.onCardSelect} />
                 </div>
             </div>
 
