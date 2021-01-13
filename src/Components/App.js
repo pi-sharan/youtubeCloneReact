@@ -24,9 +24,11 @@ class App extends React.Component {
         return (
             <div className="wrapAll">
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                <Video Vids={this.state.videos} />
-                <Desc Vids={this.state.videos} />
-                <VidList Vids={this.state.videos} />
+                <div class="insideItems">
+                    <Video Vids={this.state.videos} />
+                    <Desc Vids={this.state.videos} />
+                    <VidList Vids={this.state.videos} />
+                </div>
             </div>
 
         );

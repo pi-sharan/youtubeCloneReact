@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/Desc.css';
 
 const Desc = props => {
     let text = "";
@@ -8,7 +9,7 @@ const Desc = props => {
     }
 
     return (
-        <div>
+        <div className="desc">
             {text}
         </div>
     );

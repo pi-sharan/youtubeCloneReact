@@ -1,5 +1,6 @@
 import React from 'react';
 import VidCard from './VidCard.js'
+import '../CSS/VidList.css';
 
 const VidList = props => {
     const videos = props.Vids.map(vid => {
@@ -7,7 +8,7 @@ const VidList = props => {
     });
 
     return (
-        <div>
+        <div class="scroll">
             {videos}
         </div>
     );

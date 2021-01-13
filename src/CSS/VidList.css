@@ -1,0 +1,6 @@
+.scroll{
+    grid-column: 2/span 1;
+    grid-row: 1/span 2;
+    height:700px;
+    overflow: scroll;
+}
