@@ -1,4 +1,17 @@
 .container{
     display: flex;
-    /* background-color: green; */
+    margin-bottom: 5px;
+}
+
+.container:hover{
+    background-color: rgb(82, 78, 78);
+}
+
+.title{
+    display: flex;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 550;
+    color: rgb(243, 227, 227);
 }

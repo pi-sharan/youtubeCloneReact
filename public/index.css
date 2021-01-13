@@ -5,9 +5,12 @@
 html,body{
     width:100%;
     height:100%;
+    margin:0;
+    background-color: rgb(44, 41, 41);
 }
 
 #root{
     height: 100%;
     width: 100%;
+    
 }

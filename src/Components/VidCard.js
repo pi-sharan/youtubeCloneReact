@@ -3,6 +3,10 @@ import '../CSS/VidCard.css';
 
 const VidCard = props => {
 
+    const vidRef = React.createRef();
+
+    console.dir(vidRef);
+
     return (
         <div class="container">
             <div class="thumbnail">

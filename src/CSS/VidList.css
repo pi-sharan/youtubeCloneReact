@@ -3,4 +3,7 @@
     grid-row: 1/span 2;
     height:700px;
     overflow: scroll;
+    margin-left: 10px;
+    margin-right: 10px;
+    color:white
 }

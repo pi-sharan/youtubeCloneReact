@@ -7,7 +7,7 @@ import Desc from './Desc.js';
 import VidList from './VidList.js'
 
 class App extends React.Component {
-    state = { videos: [] };
+    state = { videos: [], currentVid: [] };
 
     onSearchSubmit = async searchTerm => {
         const response = await youtube.get('', {
@@ -18,6 +18,10 @@ class App extends React.Component {
         this.setState({ videos: response.data.items });
         console.log(this.state.videos);
     };
+
+    // onCardSelect = (vid) => {
+    //     this.setState({currentVid:vid});
+    // }
 
 
     render() {
